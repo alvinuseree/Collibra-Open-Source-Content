@@ -1,5 +1,3 @@
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
 <br />
 <div align="center">
   <h3 align="center">Collibra Open Source Content</h3>
@@ -7,7 +5,7 @@
   <p align="center">
     Feel free to fork this repo and use some of this code as inspiration!
     <br />
-    <a href="https://github.com/alvinuseree/Collibra-Open-Source-Content"><strong>Explore the repo »</strong></a>
+    <a href="https://github.com/alvinuseree/Collibra-Open-Source-Content"><strong>Explore the repo!</strong></a>
     <br />
     <br />
     <a href="https://www.linkedin.com/in/alvinuseree/">My LinkedIn</a>
