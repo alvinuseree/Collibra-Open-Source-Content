@@ -11,7 +11,7 @@ Rows 1 and 3 and achieved by embedding the HTML code in this folder as part of a
 
 Row 2 is achieved by using the Workflow Button widget and with some custom.css (also available)
 
-<img src="https://github.com/alvinuseree/Collibra-Open-Source-Content/blob/main/Dashboarding/Example%20Support%20Portal/Support%20Portal.PNG">
+<img src="https://github.com/alvinuseree/Collibra-Open-Source-Content/blob/main/Dashboarding/Example%20Support%20Portal/Support%20Portal.PNG" height="100">
 
 # How to Edit:
 The codeset has been commented to highlight areas where I'd reccommend editting/customisation.
