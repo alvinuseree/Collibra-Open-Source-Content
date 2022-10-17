@@ -1,0 +1,25 @@
+.workflow-starter-button > .btn.advanced {
+    position: relative;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 20px;
+}    
+
+.text-widget {
+    padding: 8px;
+    border-top: none;
+}
+
+.widget {
+    background-color: #fff;
+    display: block;
+    margin: 0 30px 20px 0;
+    padding: 10px;
+    border: none;
+}
+
+.global-workflows-initiator {
+    overflow: auto;
+    text-align: center;
+}
