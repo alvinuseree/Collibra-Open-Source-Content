@@ -1,1 +1,12 @@
-place
+.workflow-starter-button > .btn.advanced {
+    position: relative;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-radius: 20px;
+}
+
+.global-workflows-initiator {
+    overflow: auto;
+    text-align: center;
+}
