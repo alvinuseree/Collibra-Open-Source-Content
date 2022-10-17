@@ -1,0 +1,144 @@
+<!--
+- This file contains the code for the Top third of the Support Portal Dashboard.
+- The Dashboard consist of the following rows: Top Row (this file), Middle Row (Workflow Buttons) and the Bottom Row (another html file).
+- This file is to be embedded in Collibra using the reporting insights or IFrame widget
+//-->
+
+<html>
+    <head>
+    <!-- Feel free to change the link here to your instance //-->        
+        <link rel="stylesheet" href="https://REPLACEME.collibra.com/resources/dist/dgc/singlePageApp.css">
+    </head>
+    <!-- I don't reccommend chaning the styles unless you're 100% confortable doing so //-->  
+    <style>        
+        .topHeader{
+            background: rgba(0, 43, 63, 1);
+            width: 100%;
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            margin-top: -40px;
+        }
+
+        #topBar{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            background: rgba(0, 43, 63, 1);
+        }
+
+        .logoContainer{
+            width: 50%;
+            padding-left: 1%;
+        }
+
+        #linksContainer{
+            width: 49.5%;
+            text-align: right;
+            display: flex;
+            justify-content: end;
+        }
+
+        #linksContainer > a{
+            margin-right: 15px;
+            text-decoration: none;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 10px 10px 10px 10px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        #linksContainer > a:hover{
+            background: #09354a;
+        }        
+
+        .title {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }        
+
+        input{
+            height: 35px;
+            width: 40%;
+            border-radius: 15px;
+            border: none;
+            color: black;
+            padding-left: 15px;
+        }
+
+    </style>
+    <!-- This section contains the rendered HTML content //-->  
+    <body>
+        <div id="topBar">
+            <!-- Change to link to an image of your choice //-->  
+            <div class="logoContainer">
+                <img src="https://billigence.com/wp-content/uploads/2020/07/Billigence-Business-Intelligence-Company-Website-Logo-4.png" style="filter: brightness(0) invert(1); height: 20px">
+            </div>
+            <!-- Change links to links of your choice (placeholder is "replaceMe") //-->  
+            <div id="linksContainer">
+                <a href="replaceMe" target="_blank">
+                    <em style="font-size: 3.6em; padding-top: 10px; padding-bottom: 10px;"class="icon-basket-large"></em>Catalog
+                </a>
+                <a href="replaceMe" target="_blank">
+                    <em style="font-size: 2em; padding-top: 5px; padding-bottom: 5px;"class="uf-additional-icon-folder"></em>Explorer
+                </a> 
+                <a href="replaceMe">
+                    <em style="font-size: 2em; padding-top: 5px; padding-bottom: 5px;"class="uf-additional-icon-symbol_university"></em>Training
+                </a>
+                <a href="replaceMe">
+                    <em style="font-size: 2em; padding-top: 5px; padding-bottom: 5px;"class="uf-additional-icon-communication_speech-bubble-notification2"></em>Teams
+                </a>
+                <a href="replaceMe">
+                    <em style="font-size: 2em; padding-top: 5px; padding-bottom: 5px;"class="uf-additional-icon-building_courthouse"></em>Sharepoint
+                </a>
+            </div>
+        </div>    
+        <!-- Contains the title information //-->      
+        <div class="topHeader">            
+            <p class="title">Collibra Support Portal</p>
+            <p class="subtitle">Need help? We're here to assist!</p>
+            <input placeholder="Search the Portal.." id="searchBar" onkeyup="search(event)">
+        </div>
+
+        <script>
+            //----------------------------------------------------------------
+            //Configurable Variables:
+            //Change these to fit your needs
+            baseUrl = "https://REPLACEME.collibra.com"
+            listAssetsToFilter = [
+                "00000000-0000-0000-0000-000000031008",
+                "0772d0fe-27f3-4606-9879-e351f5eee2b6"
+            ]
+            //----------------------------------------------------------------
+
+            //----------------------------------------------------------------
+            //Search Code:  
+            assetFilters = ""          
+            if(listAssetsToFilter.length != 0){
+                assetFilters = "&asset_type=" + encodeURIComponent(listAssetsToFilter.toString())
+            }
+
+            function search(e){
+                if(e.key == "Enter"){
+                    var contents = document.getElementById("searchBar").value
+                    window.parent.location = baseUrl + "/search?q=" + contents + assetFilters;
+                }
+            }
+            //----------------------------------------------------------------
+
+        </script>
+    </body>
+</html>
